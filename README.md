@@ -1,6 +1,6 @@
 # Moduł do Prestashop 1.6.x do integracji z Automater.pl
 ###Instrukcja instalacji
-1. Pobierz paczkę instalacyjną - automater_presta1.6_latest.zip
+1. Pobierz paczkę instalacyjną - [automater_presta1.6_latest.zip](http://automater.pl/files/plugins/automater_presta1.6_latest.zip)
 2. Zaloguj się do panelu administracyjnego sklepu i przejdź do zakładki Moduły / Moduły i usługi
 3. Kliknij w przycisk Dodaj nowy moduł w prawej górnej części strony i wybierz pobrany plik wtyczki
 4. Korzystając z wyszukiwarki znajdź moduł o nazwie Automater.pl
