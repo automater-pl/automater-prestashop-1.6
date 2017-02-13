@@ -286,6 +286,10 @@
 			}
 
 			$order = new Order($orderid);
+            $currency = new CurrencyCore($order->id_currency);
+            $currencyIsoCode = $currency->iso_code;
+            if (empty($currencyIsoCode)) $currencyIsoCode = "PLN";
+
 			$automaterCartId = $this->getAutomaterCartId($orderid);
 
 			if(!$automaterCartId) {
@@ -295,7 +299,7 @@
 			try {
 				$totalamount = $order->total_paid;
 
-				$response = $this->_automater->createPayment('cart', $automaterCartId, 'shop payment', $totalamount, "PLN",'shop payment');
+				$response = $this->_automater->createPayment('cart', $automaterCartId, 'shop payment', $totalamount, $currencyIsoCode,'shop payment');
 				 if ($response['code'] == '200') {
 				   $automaterCartId = $response['cart_id'];
 					$data =array(
