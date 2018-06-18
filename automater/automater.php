@@ -35,7 +35,7 @@ class automater extends Module
 
         $this->displayName = $this->l('Automater.pl');
         $this->description = $this->l('Automater.pl integration plugin');
-        $this->ps_versions_compliancy = array('min' => '1.7', 'max' => _PS_VERSION_);
+        $this->ps_versions_compliancy = array('min' => '1.6', 'max' => '1.6.9');
         $this->defaultShopId = Configuration::get('PS_SHOP_DEFAULT');
     }
 
