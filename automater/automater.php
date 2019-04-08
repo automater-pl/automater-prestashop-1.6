@@ -20,7 +20,7 @@ class automater extends Module
     {
         $this->name = 'automater';
         $this->tab = 'administration';
-        $this->version = '1.0.3';
+        $this->version = '1.0.4';
         $this->author = 'Automater sp. z o.o.';
         $this->need_instance = 0;
 
@@ -232,7 +232,7 @@ class automater extends Module
                     }
 
                     $productsArray[$automaterProductId]['quantity'] = $productsArray[$automaterProductId]['quantity'] + $qty;
-                    $productsArray[$automaterProductId]['price'] = $product['unit_price_tax_incl'];
+                    $productsArray[$automaterProductId]['price'] = round($product['unit_price_tax_incl'] - ($order->total_discounts_tax_incl / count($products)), 2);
                 }
             } catch (Exception $e) {}
         }
